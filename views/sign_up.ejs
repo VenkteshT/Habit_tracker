@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form action="/user/create" method="POST">
+      <h3>Sign Up for Track Your Habit</h3>
+
+      <label for="username">User name</label>
+      <input
+        type="text"
+        name="name"
+        id="username"
+        placeholder="Your Name"
+        required
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="yourmail@gmail.com"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        id="password"
+        required
+      />
+
+      <label for="cp">Confirm Password</label>
+      <input
+        type="password"
+        name="confirmpassword"
+        placeholder="Confirm Password"
+        id="cp"
+        required
+      />
+
+      <input type="submit" value="Sign Up" />
+      <h3 id="already">
+        Already have account ?
+        <a href="/user/signin" id="signinlink">Sign In</a>
+      </h3>
+    </form>
+  </body>
+</html>
