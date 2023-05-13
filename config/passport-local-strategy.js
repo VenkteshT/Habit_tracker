@@ -12,7 +12,7 @@ passport.use(
     async (req, email, password, done) => {
       try {
         const user = await User.findOne({ email });
-        if (!user || !(await user.comparePassword(password))) {
+        if (!user || user.password!==password) {
           req.flash(
             "error",
             !user ? "user dose not exist" : "Invalid Password or username"
